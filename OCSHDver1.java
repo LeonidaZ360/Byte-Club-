@@ -1,20 +1,25 @@
 import java.util.Scanner;
 
 
-class Boardinghouse {
-            private int listingID = 0;//will be changed upon implementation of arrays or file handling
+public class OCSHDver1 {
+
+    public static void main(String[] args){
+    
+    Scanner input = new Scanner(System.in);
+        
+            int listingID = 0;//will be changed upon implementation of arrays or file handling
             //private String ownerUsername;
-            private String landlordName;
-            private String phoneNumber;
-            private double rentPrice;
-            private String distancefromCampus;
-            private int maxBedspace;
-            private int totalOccupants;
-            private int availableSpace;
-            private String description;
+            String landlordName;
+            String phoneNumber;
+            double rentPrice;
+            String distancefromCampus;
+            int maxBedspace;
+            int totalOccupants;
+            int availableSpace;
+            String description;
             //will add classes for user accounts depending on group consensus  
 
-        public Boardinghouse(Scanner input){
+    
 
             //ownerUsername = accountUsername;
             //will be completed when accounts are implemented so owners can edit listings
@@ -44,60 +49,25 @@ class Boardinghouse {
 
             System.out.println("give a brief description of the boarding house amenities:  \n");
             description = input.nextLine();
-        
-        }
-        //public String getownerUsername() { return ownerUsername;}
-        public int getlistingID() { return listingID;}
-        public String getLandlordName() { return landlordName; }
-        public String getPhoneNumber() { return phoneNumber; }
-        public double getRentPrice() { return rentPrice; }
-        public String getDistanceFromCampus() { return distancefromCampus; }
-        public int getMaxBedspace() { return maxBedspace; }
-        public int getTotalOccupants() { return totalOccupants; }
-        public int getAvailableSpace() { return availableSpace; }
-        public String getDescription() { return description; }
 
-        public void setListingID(int listingID){
-        this.listingID = listingID;
-    }
-        
-        public boolean isAvailable(){
-            return availableSpace > 0;
-        }
-        public void addOccupant(){
-            this.availableSpace = (this.availableSpace - 1);
-        }
-        public void removeOccupant(){
-            this.availableSpace = (this.availableSpace + 1);
-        }
-        public void displaylisting(){
-            System.out.println("---------------------------------------------------------------------------------------");
-            System.out.println("Listing ID: " + getlistingID());
-            System.out.println("Landlord name: " + getLandlordName());
-            System.out.println("Phone number: " + getPhoneNumber());
-            System.out.println("Rent: " + getRentPrice());
-            System.out.println("Distance: " + getDistanceFromCampus());
-            System.out.println("Max bedspaces: " + getMaxBedspace());
-            System.out.println("Total Occupants: " + getTotalOccupants());
-            System.out.println("Available space: " + getAvailableSpace());
-            System.out.println("description: \n " + getDescription());
-            System.out.println("---------------------------------------------------------------------------------------");
-        }
-
- }
-
-public class OCSHDver1 {
-
-    public static void main(String[] args){
     
-    Scanner input = new Scanner(System.in);
 
-//test code. to verify everything is in order
-
-    Boardinghouse bh = new Boardinghouse(input);
-    bh.displaylisting();
+            System.out.println("---------------------------------------------------------------------------------------");
+            System.out.println("Listing ID: " + listingID);
+            System.out.println("Landlord name: " + landlordName);
+            System.out.println("Phone number: " + phoneNumber);
+            System.out.println("Rent: " + rentPrice);
+            System.out.println("Distance: " + distancefromCampus);
+            System.out.println("Max bedspaces: " + maxBedspace);
+            System.out.println("Total Occupants: " + totalOccupants);
+            System.out.println("Available space: " + availableSpace);
+            System.out.println("description: \t " + description);
+            System.out.println("---------------------------------------------------------------------------------------");
+        
 
 
     input.close();
-    }
+
+}
+
 }
